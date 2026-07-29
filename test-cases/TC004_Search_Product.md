@@ -7,30 +7,44 @@ TC004
 Search a Product
 
 ## Description
-Verify that a user can enter a search term in the product search field and receive relevant matching results.
+Verify that a user can log in, open the product search page, enter a search term, submit the search, and see matching results.
+
+## Application
+| Field | Value |
+|-------|-------|
+| Store | OpenCart demo (`opencart.abstracta.us`) |
+| Start URL | `https://opencart.abstracta.us/index.php?route=account/login` |
+| Output | [`output/ui_explorer_TC004.json`](../output/ui_explorer_TC004.json) |
 
 ## Preconditions
 - Application is accessible and running.
-- Search functionality is available on the header or home page.
-- Catalog contains products matching the search term.
+- A valid registered account exists.
+- Catalog contains products matching the search term (demo catalog uses **iPhone**).
 
 ## Test Data
 | Field | Value |
 |-------|-------|
-| Search Term | wireless headphones |
+| Username / Email | APP_USERNAME from `.env` |
+| Password | APP_PASSWORD from `.env` |
+| Search Term | iPhone |
 
 ## Priority
 Medium
 
 ## Test Steps
 
-| Step | Action | Expected Result |
-|------|--------|-----------------|
-| 1 | Locate the product search input on the application header or home page. | Search field is visible and editable. |
-| 2 | Enter the search term "wireless headphones" in the search field. | The search term appears in the input field. |
-| 3 | Submit the search (press Enter or click the Search icon/button). | Search results page loads for the submitted term. |
-| 4 | Review the list of returned products. | Results related to the search term are displayed (e.g., headphone products). |
-| 5 | Confirm result relevance and UI feedback. | Matching products are shown with names/titles containing or related to the search term; if no exact matches exist, an appropriate empty-state or suggestions message is shown. |
+These steps match the actions executed and locators captured by the UI Explorer Agent.
+
+| Step | Action | Expected Result | Locator (from output) |
+|------|--------|-----------------|------------------------|
+| 1 | Navigate to the account login page. | Login page is displayed. | URL: `.../index.php?route=account/login` |
+| 2 | Enter a valid email in the E-Mail Address field. | Email is shown in the field. | `id=input-email` (unique) |
+| 3 | Enter a valid password in the Password field. | Password is accepted (masked). | `id=input-password` (unique) |
+| 4 | Click the Login button. | User is authenticated. | `role=button\|name=Login` (unique) |
+| 5 | Navigate to the product search page. | Search page loads. | URL: `.../index.php?route=product/search` |
+| 6 | Enter the search term "iPhone" in the Keywords / Search Criteria field. | Search term appears in the field. | `id=input-search` (unique) |
+| 7 | Click the Search button. | Search results page loads for the submitted term. | `id=button-search` (unique) |
+| 8 | Verify search results relevance. | Results page contains the text "iPhone". | Assert text: `iPhone` |
 
 ## Postconditions
 - User remains on the search results page with the applied search term.

@@ -7,32 +7,41 @@ TC001
 User Login with Valid Credentials
 
 ## Description
-Verify that a registered user can successfully log in to the e-commerce application using valid username/email and password credentials.
+Verify that a registered user can log in to the OpenCart demo store with valid email and password, then land on the account page.
+
+## Application
+| Field | Value |
+|-------|-------|
+| Store | OpenCart demo (`opencart.abstracta.us`) |
+| Start URL | `https://opencart.abstracta.us/index.php?route=account/login` |
+| Output | [`output/ui_explorer_TC001.json`](../output/ui_explorer_TC001.json) |
 
 ## Preconditions
 - Application is accessible and running.
-- User has a valid registered account.
-- User is logged out and on the application home page or login page.
+- A valid registered account exists (credentials from agent `.env`: `APP_USERNAME` / `APP_PASSWORD`).
+- User is logged out.
 
 ## Test Data
 | Field | Value |
 |-------|-------|
-| Username / Email | valid.user@example.com |
-| Password | ValidPass@123 |
+| Username / Email | APP_USERNAME from `.env` |
+| Password | APP_PASSWORD from `.env` |
 
 ## Priority
 High
 
 ## Test Steps
 
-| Step | Action | Expected Result |
-|------|--------|-----------------|
-| 1 | Navigate to the application login page. | Login page is displayed with username/email and password fields. |
-| 2 | Enter a valid username or email in the username/email field. | The entered value is shown in the field. |
-| 3 | Enter a valid password in the password field. | The password is accepted (masked) in the field. |
-| 4 | Click the Login / Sign In button. | The system authenticates the user successfully. |
-| 5 | Observe the post-login landing page. | User is redirected to the home/dashboard page and a logged-in user indicator (e.g., profile name or account menu) is visible. |
+These steps match the actions executed and locators captured by the UI Explorer Agent.
+
+| Step | Action | Expected Result | Locator (from output) |
+|------|--------|-----------------|------------------------|
+| 1 | Navigate to the account login page. | Login page loads with E-Mail Address and Password fields. | URL: `.../index.php?route=account/login` |
+| 2 | Enter a valid email in the E-Mail Address field. | The email value is shown in the field. | `id=input-email` (unique) |
+| 3 | Enter a valid password in the Password field. | The password is accepted (masked) in the field. | `id=input-password` (unique) |
+| 4 | Click the Login button. | The system authenticates the user. | `role=button\|name=Login` (unique) |
+| 5 | Verify the post-login account page. | Page shows "My Account" and URL is the account page. | Assert text: `My Account` |
 
 ## Postconditions
-- User session is active.
+- User session is active on the account page.
 - User remains logged in until logout or session expiry.

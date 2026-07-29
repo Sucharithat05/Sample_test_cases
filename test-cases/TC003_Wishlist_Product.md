@@ -7,32 +7,50 @@ TC003
 Wishlist a Product
 
 ## Description
-Verify that a logged-in user can find a product and add it to the wishlist, then confirm that the product appears in the wishlist.
+Verify that a user can log in, search for a product, open the product detail page, add it to the wish list, and open the wish list page.
+
+## Application
+| Field | Value |
+|-------|-------|
+| Store | OpenCart demo (`opencart.abstracta.us`) |
+| Start URL | `https://opencart.abstracta.us/index.php?route=account/login` |
+| Output | [`output/ui_explorer_TC003.json`](../output/ui_explorer_TC003.json) |
 
 ## Preconditions
 - Application is accessible and running.
-- User is logged in successfully.
-- Wishlist feature is enabled for the account.
-- At least one product is available to wishlist.
+- A valid registered account exists.
+- Wish List feature is available for the account.
+- Catalog contains the product under test (demo catalog uses **iPhone**).
 
 ## Test Data
 | Field | Value |
 |-------|-------|
-| Product Name | Sample Running Shoes |
+| Username / Email | APP_USERNAME from `.env` |
+| Password | APP_PASSWORD from `.env` |
+| Product Name | iPhone |
+| Search Term | iPhone |
 
 ## Priority
 Medium
 
 ## Test Steps
 
-| Step | Action | Expected Result |
-|------|--------|-----------------|
-| 1 | Navigate to the product catalog or use browse/search to find products. | Product listing is displayed. |
-| 2 | Locate and open the product "Sample Running Shoes" (or an available equivalent). | Product detail page is displayed. |
-| 3 | Click the Add to Wishlist / Heart / Save icon. | Success confirmation indicates the product was added to the wishlist. |
-| 4 | Navigate to the Wishlist page from the account menu or wishlist icon. | Wishlist page opens. |
-| 5 | Verify the wishlist contents. | The selected product appears in the wishlist with correct name and product details. |
+These steps match the actions executed and locators captured by the UI Explorer Agent.
+
+| Step | Action | Expected Result | Locator (from output) |
+|------|--------|-----------------|------------------------|
+| 1 | Navigate to the account login page. | Login page is displayed. | URL: `.../index.php?route=account/login` |
+| 2 | Enter a valid email in the E-Mail Address field. | Email is shown in the field. | `id=input-email` (unique) |
+| 3 | Enter a valid password in the Password field. | Password is accepted (masked). | `id=input-password` (unique) |
+| 4 | Click the Login button. | User is authenticated. | `role=button\|name=Login` (unique) |
+| 5 | Navigate to the product search page. | Search page loads. | URL: `.../index.php?route=product/search` |
+| 6 | Enter the search term "iPhone" in the Keywords / Search Criteria field. | Search term appears in the field. | `id=input-search` (unique) |
+| 7 | Click the Search button. | Search results for iPhone are shown. | `id=button-search` (unique) |
+| 8 | Click the product link "iPhone". | Product detail page opens. | `role=link\|name=iPhone` |
+| 9 | Click the Add to Wish List control (heart / wishlist button). | Product is added to the wish list. | `button[data-original-title='Add to Wish List']` |
+| 10 | Navigate to the Wish List page. | Wish List page opens. | URL: `.../index.php?route=account/wishlist` |
+| 11 | Verify the Wish List page is displayed. | Page contains the text "Wish List". | Assert text: `Wish List` |
 
 ## Postconditions
-- Product remains in the wishlist until removed by the user.
-- Wishlist count (if shown) is updated accordingly.
+- Product remains in the wish list until removed by the user.
+- Wish List page is reachable while the user session is active.
