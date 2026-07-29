@@ -3,7 +3,7 @@
   "test_case_id": "TC004",
   "goal": "Search a Product",
   "base_url": "https://www.amazon.in/",
-  "generated_at": "2026-07-29T09:48:13.185005",
+  "generated_at": "2026-07-29T10:02:12.824917",
   "status": "completed",
   "locators_found": 2,
   "steps": [

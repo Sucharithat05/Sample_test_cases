@@ -3,9 +3,9 @@
   "test_case_id": "TC002",
   "goal": "Add Product To Cart",
   "base_url": "https://www.amazon.in/",
-  "generated_at": "2026-07-29T09:45:56.198758",
+  "generated_at": "2026-07-29T09:58:17.044284",
   "status": "completed",
-  "locators_found": 3,
+  "locators_found": 6,
   "steps": [
     {
       "step": 1,
@@ -50,13 +50,35 @@
       "step": 4,
       "action": "fill",
       "target": "quantity",
-      "status": "unmatched"
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "text": "Search Amazon.in",
+        "label": "Search Amazon.in"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "twotabsearchtextbox",
+        "unique": true
+      },
+      "executed": true
     },
     {
       "step": 5,
       "action": "click",
       "target": "add_to_cart",
-      "status": "unmatched"
+      "element": {
+        "tag": "a",
+        "type": "link",
+        "text": "0\nCart",
+        "label": "0 items in cart"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "nav-cart",
+        "unique": true
+      },
+      "executed": true
     },
     {
       "step": 6,
@@ -65,12 +87,12 @@
       "element": {
         "tag": "a",
         "type": "link",
-        "text": "Cart\nshift\n+\nalt\n+\nC",
-        "label": "Cart, shift, alt, c"
+        "text": "Your Amazon Cart",
+        "label": "Shopping cart"
       },
       "locator": {
         "strategy": "id",
-        "value": "nav-assist-cart",
+        "value": "nav-assist-shopping-cart",
         "unique": true
       },
       "executed": false
@@ -79,8 +101,18 @@
       "step": 7,
       "action": "assert",
       "target": "result",
-      "status": "unmatched"
+      "element": {
+        "tag": "a",
+        "type": "link",
+        "text": "0\nCart",
+        "label": "0 items in cart"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "nav-cart",
+        "unique": true
+      }
     }
   ],
-  "llm_recovery_used": false
+  "llm_recovery_used": true
 }

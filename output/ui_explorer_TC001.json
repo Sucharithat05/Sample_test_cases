@@ -3,9 +3,9 @@
   "test_case_id": "TC001",
   "goal": "User Login with Valid Credentials",
   "base_url": "https://www.amazon.in/",
-  "generated_at": "2026-07-29T09:43:32.277245",
+  "generated_at": "2026-07-29T09:55:51.732581",
   "status": "completed",
-  "locators_found": 0,
+  "locators_found": 2,
   "steps": [
     {
       "step": 1,
@@ -17,13 +17,33 @@
       "step": 2,
       "action": "click",
       "target": "login",
-      "status": "unmatched"
+      "element": {
+        "tag": "a",
+        "type": "link",
+        "text": "Hello, sign in\nAccount & Lists"
+      },
+      "locator": {
+        "strategy": "role",
+        "value": "role=link|name=Hello, sign in\nAccount & Lists",
+        "unique": true
+      },
+      "executed": true
     },
     {
       "step": 3,
       "action": "fill",
       "target": "username",
-      "status": "unmatched"
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "label": "Enter mobile number or email"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "ap_email_login",
+        "unique": true
+      },
+      "executed": true
     },
     {
       "step": 4,
@@ -44,5 +64,5 @@
       "status": "unmatched"
     }
   ],
-  "llm_recovery_used": false
+  "llm_recovery_used": true
 }

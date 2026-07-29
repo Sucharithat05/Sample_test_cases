@@ -3,9 +3,9 @@
   "test_case_id": "TC003",
   "goal": "Wishlist a Product",
   "base_url": "https://www.amazon.in/",
-  "generated_at": "2026-07-29T09:47:29.349627",
+  "generated_at": "2026-07-29T10:01:30.250098",
   "status": "completed",
-  "locators_found": 2,
+  "locators_found": 5,
   "steps": [
     {
       "step": 1,
@@ -50,20 +50,52 @@
       "step": 4,
       "action": "click",
       "target": "wishlist",
-      "status": "unmatched"
+      "element": {
+        "tag": "a",
+        "type": "link",
+        "text": "Main content",
+        "label": "main content"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "nav-assist-skip-to-main-content",
+        "unique": true
+      },
+      "executed": false
     },
     {
       "step": 5,
       "action": "click",
       "target": "wishlist",
-      "status": "unmatched"
+      "element": {
+        "tag": "a",
+        "type": "link",
+        "text": "Main content",
+        "label": "main content"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "nav-assist-skip-to-main-content",
+        "unique": true
+      },
+      "executed": false
     },
     {
       "step": 6,
       "action": "assert",
       "target": "result",
-      "status": "unmatched"
+      "element": {
+        "tag": "a",
+        "type": "link",
+        "text": "Main content",
+        "label": "main content"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "nav-assist-skip-to-main-content",
+        "unique": true
+      }
     }
   ],
-  "llm_recovery_used": false
+  "llm_recovery_used": true
 }
