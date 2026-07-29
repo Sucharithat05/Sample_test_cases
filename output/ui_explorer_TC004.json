@@ -1,0 +1,51 @@
+{
+  "agent": "ui_explorer",
+  "test_case_id": "TC004",
+  "goal": "Search a Product",
+  "base_url": "https://www.amazon.in/",
+  "generated_at": "2026-07-29T09:35:33.236554",
+  "status": "completed",
+  "locators_found": 2,
+  "steps": [
+    {
+      "step": 1,
+      "action": "navigate",
+      "url": "https://www.amazon.in/",
+      "status": "ok"
+    },
+    {
+      "step": 2,
+      "action": "fill",
+      "target": "search",
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "text": "Search Amazon.in",
+        "label": "Search Amazon.in"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "twotabsearchtextbox",
+        "unique": true
+      },
+      "executed": true
+    },
+    {
+      "step": 3,
+      "action": "click",
+      "target": "search",
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "text": "Go"
+      },
+      "locator": {
+        "strategy": "id",
+        "value": "nav-search-submit-button",
+        "unique": true
+      },
+      "executed": true
+    }
+  ],
+  "llm_recovery_used": false
+}
