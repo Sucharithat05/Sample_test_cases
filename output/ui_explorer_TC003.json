@@ -1,9 +1,9 @@
 {
   "agent": "ui_explorer",
-  "test_case_id": "TC004",
-  "goal": "Search a Product",
+  "test_case_id": "TC003",
+  "goal": "Wishlist a Product",
   "base_url": "https://www.amazon.in/",
-  "generated_at": "2026-07-29T09:48:13.185005",
+  "generated_at": "2026-07-29T09:47:29.349627",
   "status": "completed",
   "locators_found": 2,
   "steps": [
@@ -33,18 +33,36 @@
     {
       "step": 3,
       "action": "click",
-      "target": "search",
+      "target": "product",
       "element": {
-        "tag": "input",
-        "type": "input",
-        "text": "Go"
+        "tag": "a",
+        "type": "link",
+        "text": "Custom Products"
       },
       "locator": {
-        "strategy": "id",
-        "value": "nav-search-submit-button",
+        "strategy": "role",
+        "value": "role=link|name=Custom Products",
         "unique": true
       },
       "executed": true
+    },
+    {
+      "step": 4,
+      "action": "click",
+      "target": "wishlist",
+      "status": "unmatched"
+    },
+    {
+      "step": 5,
+      "action": "click",
+      "target": "wishlist",
+      "status": "unmatched"
+    },
+    {
+      "step": 6,
+      "action": "assert",
+      "target": "result",
+      "status": "unmatched"
     }
   ],
   "llm_recovery_used": false
