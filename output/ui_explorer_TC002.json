@@ -2,117 +2,154 @@
   "agent": "ui_explorer",
   "test_case_id": "TC002",
   "goal": "Add Product To Cart",
-  "base_url": "https://www.amazon.in/",
-  "generated_at": "2026-07-29T09:58:17.044284",
+  "base_url": "https://opencart.abstracta.us/index.php?route=account/login",
+  "generated_at": "2026-07-29T10:38:38.168652",
   "status": "completed",
-  "locators_found": 6,
+  "locators_found": 7,
+  "steps_executed": 7,
+  "steps_unmatched": 0,
   "steps": [
     {
       "step": 1,
       "action": "navigate",
-      "url": "https://www.amazon.in/",
+      "url": "https://opencart.abstracta.us/index.php?route=account/login",
       "status": "ok"
     },
     {
       "step": 2,
       "action": "fill",
-      "target": "search",
+      "target": "username",
       "element": {
         "tag": "input",
         "type": "input",
-        "text": "Search Amazon.in",
-        "label": "Search Amazon.in"
+        "text": "E-Mail Address",
+        "label": "E-Mail Address"
       },
       "locator": {
         "strategy": "id",
-        "value": "twotabsearchtextbox",
+        "value": "input-email",
         "unique": true
       },
       "executed": true
     },
     {
       "step": 3,
-      "action": "click",
-      "target": "product",
+      "action": "fill",
+      "target": "password",
       "element": {
-        "tag": "a",
-        "type": "link",
-        "text": "Custom Products"
+        "tag": "input",
+        "type": "input",
+        "text": "Password",
+        "label": "Password"
       },
       "locator": {
-        "strategy": "role",
-        "value": "role=link|name=Custom Products",
+        "strategy": "id",
+        "value": "input-password",
         "unique": true
       },
       "executed": true
     },
     {
       "step": 4,
-      "action": "fill",
-      "target": "quantity",
+      "action": "click",
+      "target": "login",
       "element": {
         "tag": "input",
         "type": "input",
-        "text": "Search Amazon.in",
-        "label": "Search Amazon.in"
+        "text": "Login"
       },
       "locator": {
-        "strategy": "id",
-        "value": "twotabsearchtextbox",
+        "strategy": "role",
+        "value": "role=button|name=Login",
         "unique": true
       },
       "executed": true
     },
     {
       "step": 5,
-      "action": "click",
-      "target": "add_to_cart",
+      "action": "navigate",
+      "url": "https://opencart.abstracta.us/index.php?route=product/search",
+      "status": "ok"
+    },
+    {
+      "step": 6,
+      "action": "fill",
+      "target": "search",
       "element": {
-        "tag": "a",
-        "type": "link",
-        "text": "0\nCart",
-        "label": "0 items in cart"
+        "tag": "input",
+        "type": "input",
+        "text": "Keywords",
+        "label": "Search Criteria"
       },
       "locator": {
         "strategy": "id",
-        "value": "nav-cart",
+        "value": "input-search",
         "unique": true
       },
       "executed": true
     },
     {
-      "step": 6,
+      "step": 7,
       "action": "click",
-      "target": "cart",
+      "target": "search",
       "element": {
-        "tag": "a",
-        "type": "link",
-        "text": "Your Amazon Cart",
-        "label": "Shopping cart"
+        "tag": "input",
+        "type": "input",
+        "text": "Search"
       },
       "locator": {
         "strategy": "id",
-        "value": "nav-assist-shopping-cart",
+        "value": "button-search",
         "unique": true
       },
-      "executed": false
+      "executed": true
     },
     {
-      "step": 7,
-      "action": "assert",
-      "target": "result",
+      "step": 8,
+      "action": "click",
+      "target": "product",
       "element": {
         "tag": "a",
         "type": "link",
-        "text": "0\nCart",
-        "label": "0 items in cart"
+        "text": "iPhone"
+      },
+      "locator": {
+        "strategy": "role",
+        "value": "role=link|name=iPhone",
+        "unique": false
+      },
+      "executed": true
+    },
+    {
+      "step": 9,
+      "action": "click",
+      "target": "add_to_cart",
+      "element": {
+        "tag": "button",
+        "type": "button",
+        "text": "Add to Cart"
       },
       "locator": {
         "strategy": "id",
-        "value": "nav-cart",
+        "value": "button-cart",
         "unique": true
-      }
+      },
+      "executed": true
+    },
+    {
+      "step": 10,
+      "action": "navigate",
+      "url": "https://opencart.abstracta.us/index.php?route=checkout/cart",
+      "status": "ok"
+    },
+    {
+      "step": 11,
+      "action": "assert",
+      "target": "cart_contents",
+      "expected_text": "Shopping Cart",
+      "status": "passed",
+      "page_url": "https://opencart.abstracta.us/index.php?route=checkout/cart"
     }
   ],
-  "llm_recovery_used": true
+  "llm_recovery_used": false
 }
