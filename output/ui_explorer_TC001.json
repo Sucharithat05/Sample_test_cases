@@ -3,7 +3,7 @@
   "test_case_id": "TC001",
   "goal": "User Login with Valid Credentials",
   "base_url": "https://opencart.abstracta.us/index.php?route=account/login",
-  "generated_at": "2026-07-29T10:58:08.860393",
+  "generated_at": "2026-07-30T06:11:18.187654",
   "status": "completed",
   "locators_found": 7,
   "steps_executed": 7,
@@ -63,7 +63,8 @@
         "value": "role=button|name=Login",
         "unique": true
       },
-      "executed": true
+      "executed": true,
+      "login_status": "ok"
     },
     {
       "step": 5,

@@ -1,42 +1,39 @@
 ﻿# Sample Test Cases
 
-This repository contains sample e-commerce test cases aligned with the **UI Explorer Agent** execution on the OpenCart demo store (`https://opencart.abstracta.us/`).
+Input test cases for the **UI Explorer Agent**.
 
-Each Markdown file under `test-cases/` documents the **exact steps that were executed**, including the locators captured in the matching JSON under [`output/`](output/).
+## What belongs where
+
+| Location | Contains | Does **not** contain |
+|----------|----------|----------------------|
+| `test-cases/*.md` | Intent: title, preconditions, test data, actions, expected results | Locators (`id=…`, CSS, XPath, role=…) |
+| `output/*.json` | Locators discovered while the agent ran each case | Hand-written test intent |
+
+The agent reads the Markdown as **what to do**. It explores the live UI and writes locators to `output/`. Putting locators in the Markdown would make rediscovery pointless.
 
 ## Test Cases
 
-| ID | Title | Priority | Steps executed | Output |
-|----|-------|----------|----------------|--------|
-| TC001 | User Login | High | Login → assert My Account | [TC001](test-cases/TC001_User_Login.md) · [JSON](output/ui_explorer_TC001.json) |
-| TC002 | Add Product To Cart | High | Login → search iPhone → add to cart → open cart | [TC002](test-cases/TC002_Add_Product_To_Cart.md) · [JSON](output/ui_explorer_TC002.json) |
-| TC003 | Wishlist Product | Medium | Login → search iPhone → add to wish list → open wish list | [TC003](test-cases/TC003_Wishlist_Product.md) · [JSON](output/ui_explorer_TC003.json) |
-| TC004 | Search Product | Medium | Login → search iPhone → assert results | [TC004](test-cases/TC004_Search_Product.md) · [JSON](output/ui_explorer_TC004.json) |
+| ID | Title | Priority | File |
+|----|-------|----------|------|
+| TC001 | User Login | High | [TC001](test-cases/TC001_User_Login.md) |
+| TC002 | Add Product To Cart | High | [TC002](test-cases/TC002_Add_Product_To_Cart.md) |
+| TC003 | Wishlist Product | Medium | [TC003](test-cases/TC003_Wishlist_Product.md) |
+| TC004 | Search Product | Medium | [TC004](test-cases/TC004_Search_Product.md) |
 
-## Application under test
+Discovered locators: [`output/`](output/).
 
-| Field | Value |
-|-------|-------|
-| Store | OpenCart demo |
-| Base URL | `https://opencart.abstracta.us/` |
-| Login URL | `https://opencart.abstracta.us/index.php?route=account/login` |
-| Demo product | iPhone |
+## How the agent uses these
 
-Every case **starts with login**. Credentials are supplied by the agent `.env` (`APP_USERNAME` / `APP_PASSWORD`).
+1. Parse Markdown → goal, steps, test data (no locators required).
+2. Map generic product names to a real catalog item on the chosen store.
+3. Explore the live UI, match each step to a DOM element, generate locators.
+4. Write `output/ui_explorer_<ID>.json`.
 
-## Purpose
-
-These documents are the human-readable mirror of the agent run:
-
-1. Preconditions and test data for the flow that actually ran.
-2. Numbered steps matching `output/ui_explorer_*.json`.
-3. Locators discovered for each interactive step (`id`, `role`, `attribute`, etc.).
-
-## How to re-run (UI Explorer Agent)
+## How to re-run
 
 ```bash
 cd ../ui-explorer-agent
-python main.py --no-llm --push-output
+python main.py --all
 ```
 
-That regenerates the JSON under `output/` and can push updates back to this repository.
+Optional: `python main.py --all --push-output` to push updated JSON back to this repository.
