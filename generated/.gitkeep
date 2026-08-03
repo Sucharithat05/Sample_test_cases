@@ -1,0 +1,2 @@
+# Generated Playwright specs live here.
+# Re-create with: python ../ui-explorer-agent/main.py --phase generate

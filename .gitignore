@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Auth cookies/localStorage — never commit
+.auth/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.swp

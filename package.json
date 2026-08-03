@@ -1,0 +1,16 @@
+{
+  "name": "sample-test-cases",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Phase 2 Playwright suite generated from UI Explorer locator JSON",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

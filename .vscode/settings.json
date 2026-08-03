@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.ts": "typescript",
+    "*.spec.ts": "typescript"
+  },
+  "files.defaultLanguage": "typescript"
+}

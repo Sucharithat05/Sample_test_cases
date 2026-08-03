@@ -1,157 +1,78 @@
 {
   "agent": "ui_explorer",
+  "phase": "explore",
+  "mode": "discover",
   "test_case_id": "TC003",
   "goal": "Wishlist a Product",
   "base_url": "https://opencart.abstracta.us/index.php?route=account/login",
-  "generated_at": "2026-08-02T16:57:56.135368",
-  "browser_backend": "playwright",
+  "site": "opencart",
+  "generated_at": "2026-08-03T10:04:41.121955",
+  "browser_backend": "playwright_mcp",
   "status": "completed",
-  "locators_found": 7,
-  "steps_executed": 7,
+  "locators_found": 1,
+  "locators_verified": 2,
+  "steps_executed": 0,
   "steps_unmatched": 0,
   "steps": [
     {
       "step": 1,
       "action": "navigate",
-      "url": "https://opencart.abstracta.us/index.php?route=account/login",
+      "url": "https://opencart.abstracta.us/index.php?route=product/product&product_id=40",
       "status": "ok"
     },
     {
       "step": 2,
-      "action": "fill",
-      "target": "username",
-      "element": {
-        "tag": "input",
-        "type": "input",
-        "text": "E-Mail Address",
-        "label": "E-Mail Address"
-      },
-      "locator": {
-        "strategy": "id",
-        "value": "input-email",
-        "unique": true
-      },
-      "executed": true
-    },
-    {
-      "step": 3,
-      "action": "fill",
-      "target": "password",
-      "element": {
-        "tag": "input",
-        "type": "input",
-        "text": "Password",
-        "label": "Password"
-      },
-      "locator": {
-        "strategy": "id",
-        "value": "input-password",
-        "unique": true
-      },
-      "executed": true
-    },
-    {
-      "step": 4,
-      "action": "click",
-      "target": "login",
-      "element": {
-        "tag": "input",
-        "type": "input",
-        "text": "Login"
-      },
-      "locator": {
-        "strategy": "role",
-        "value": "role=button|name=Login",
-        "unique": true
-      },
-      "executed": true,
-      "login_status": "ok"
-    },
-    {
-      "step": 5,
-      "action": "navigate",
-      "url": "https://opencart.abstracta.us/index.php?route=product/search",
-      "status": "ok"
-    },
-    {
-      "step": 6,
-      "action": "fill",
-      "target": "search",
-      "element": {
-        "tag": "input",
-        "type": "input",
-        "text": "Keywords",
-        "label": "Search Criteria"
-      },
-      "locator": {
-        "strategy": "id",
-        "value": "input-search",
-        "unique": true
-      },
-      "executed": true
-    },
-    {
-      "step": 7,
-      "action": "click",
-      "target": "search",
-      "element": {
-        "tag": "input",
-        "type": "input",
-        "text": "Search"
-      },
-      "locator": {
-        "strategy": "id",
-        "value": "button-search",
-        "unique": true
-      },
-      "executed": true
-    },
-    {
-      "step": 8,
-      "action": "click",
-      "target": "product",
-      "element": {
-        "tag": "a",
-        "type": "link",
-        "text": "iPhone"
-      },
-      "locator": {
-        "strategy": "role",
-        "value": "role=link|name=iPhone",
-        "unique": false
-      },
-      "executed": true
-    },
-    {
-      "step": 9,
       "action": "click",
       "target": "wishlist",
       "element": {
         "tag": "button",
-        "type": "button",
-        "text": "Add to Wish List"
+        "type": "button"
       },
       "locator": {
         "strategy": "attribute",
         "value": "button[data-original-title='Add to Wish List']",
         "unique": false
       },
-      "executed": true
+      "match_source": "dom_fallback",
+      "locator_alternatives": [
+        {
+          "strategy": "css",
+          "value": "button"
+        },
+        {
+          "strategy": "xpath_relative",
+          "value": ".//button[@type='button']"
+        },
+        {
+          "strategy": "xpath_absolute",
+          "value": "//button"
+        }
+      ],
+      "verified": true,
+      "locator_unique": false,
+      "locator_count": 2,
+      "executed": false
     },
     {
-      "step": 10,
+      "step": 3,
       "action": "navigate",
       "url": "https://opencart.abstracta.us/index.php?route=account/wishlist",
       "status": "ok"
     },
     {
-      "step": 11,
+      "step": 4,
       "action": "assert",
       "target": "wishlist_contents",
-      "expected_text": "Wish List",
-      "status": "passed",
-      "page_url": "https://opencart.abstracta.us/index.php?route=account/wishlist"
+      "expected_text": "My Wish List",
+      "page_url": "https://opencart.abstracta.us/index.php?route=account/wishlist",
+      "executed": false,
+      "expected_url": "https://opencart.abstracta.us/index.php?route=account/wishlist",
+      "expected_url_fragment": "route=account/wishlist",
+      "verified": true,
+      "url_matched": true,
+      "status": "passed"
     }
   ],
-  "llm_recovery_used": false
+  "llm_recovery_used": false,
+  "locator_policy": "exclude_id"
 }
