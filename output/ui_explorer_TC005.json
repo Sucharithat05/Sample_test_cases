@@ -6,8 +6,8 @@
   "goal": "Create New Policy and Verify Detail + List",
   "base_url": "http://localhost:3000/policy/new",
   "site": "westfield",
-  "generated_at": "2026-08-06T11:23:18.586693",
-  "browser_backend": "playwright",
+  "generated_at": "2026-08-06T11:31:05.670592",
+  "browser_backend": "playwright_mcp",
   "status": "completed",
   "locators_found": 15,
   "locators_verified": 16,
@@ -19,7 +19,7 @@
       "action": "navigate",
       "url": "http://localhost:3000/policy/new",
       "status": "ok",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_01_navigate_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_01_navigate_ok.png"
     },
     {
       "step": 2,
@@ -27,143 +27,60 @@
       "target": "businessName",
       "element": {
         "tag": "input",
-        "type": "input",
+        "type": "text",
         "capabilities": [
           "fill",
           "press",
           "hover"
         ],
-        "text": "e.g. Green Valley Bakery LLC",
-        "label": "Business Name *"
+        "text": "e.g. Green Valley Bakery LLC"
       },
       "locator": {
         "strategy": "placeholder",
         "value": "e.g. Green Valley Bakery LLC",
-        "unique": true,
-        "validation_score": 140.0
+        "unique": true
       },
       "match_score": 290,
+      "match_source": "dom_fallback",
       "value": "Green Valley Bakery LLC",
       "locator_alternatives": [
         {
+          "strategy": "text",
+          "value": "e.g. Green Valley Bakery LLC"
+        },
+        {
           "strategy": "name",
-          "value": "businessName",
-          "unique": true
+          "value": "businessName"
         },
         {
-          "strategy": "css",
-          "value": "#businessName",
-          "unique": true
-        },
-        {
-          "strategy": "test_id",
-          "value": "input-business-name",
-          "unique": true
+          "strategy": "attribute",
+          "value": "input[type='text']"
         }
       ],
       "attempts": [
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=textbox|name=e.g. Green Valley Bakery LLC"
+          },
+          "verified": false,
+          "count": 0
+        },
         {
           "locator": {
             "strategy": "placeholder",
             "value": "e.g. Green Valley Bakery LLC",
             "unique": true
           },
-          "score": 140.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "businessName",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#businessName",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "input-business-name",
-            "unique": true
-          },
-          "score": 113.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "role",
-            "value": "role=textbox|name=Business Name *",
-            "unique": true
-          },
-          "score": 112.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Business Name *",
-            "unique": true
-          },
-          "score": 111.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_02_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_02_fill_ok.png"
     },
     {
       "step": 3,
@@ -171,142 +88,49 @@
       "target": "businessType",
       "element": {
         "tag": "select",
-        "type": "select",
-        "capabilities": [
-          "click",
-          "select",
-          "press",
-          "hover"
-        ],
-        "text": "— Select type — Food & Beverage Contractor Hospitality Childcare Professional Services Automotive Healthcare Restaurant",
+        "type": "select-one",
+        "text": "Business Type *",
         "label": "Business Type *"
       },
       "locator": {
-        "strategy": "name",
-        "value": "businessType",
-        "unique": true,
-        "validation_score": 139.0
+        "strategy": "role",
+        "value": "role=combobox|name=Business Type *",
+        "unique": true
       },
-      "match_score": 260,
+      "match_score": 40,
       "value": "Food & Beverage",
       "option": "Food & Beverage",
+      "mcp_ref": "e32",
       "locator_alternatives": [
         {
+          "strategy": "label",
+          "value": "Business Type *"
+        },
+        {
+          "strategy": "text",
+          "value": "Business Type *"
+        },
+        {
           "strategy": "css",
-          "value": "#businessType",
-          "unique": true
-        },
-        {
-          "strategy": "xpath_relative",
-          "value": ".//select[@id='businessType']",
-          "unique": true
-        },
-        {
-          "strategy": "test_id",
-          "value": "select-business-type",
-          "unique": true
+          "value": "select"
         }
       ],
       "attempts": [
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "businessType",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#businessType",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//select[@id='businessType']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "select-business-type",
-            "unique": true
-          },
-          "score": 128.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected"
-          ]
-        },
         {
           "locator": {
             "strategy": "role",
             "value": "role=combobox|name=Business Type *",
             "unique": true
           },
-          "score": 127.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Business Type *",
-            "unique": true
-          },
-          "score": 126.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_03_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_03_select_ok.png"
     },
     {
       "step": 4,
@@ -314,143 +138,60 @@
       "target": "ownerName",
       "element": {
         "tag": "input",
-        "type": "input",
+        "type": "text",
         "capabilities": [
           "fill",
           "press",
           "hover"
         ],
-        "text": "e.g. Sarah Mitchell",
-        "label": "Owner / Primary Contact *"
+        "text": "e.g. Sarah Mitchell"
       },
       "locator": {
         "strategy": "placeholder",
         "value": "e.g. Sarah Mitchell",
-        "unique": true,
-        "validation_score": 140.0
+        "unique": true
       },
       "match_score": 290,
+      "match_source": "dom_fallback",
       "value": "Sarah Mitchell",
       "locator_alternatives": [
         {
+          "strategy": "text",
+          "value": "e.g. Sarah Mitchell"
+        },
+        {
           "strategy": "name",
-          "value": "ownerName",
-          "unique": true
+          "value": "ownerName"
         },
         {
-          "strategy": "css",
-          "value": "#ownerName",
-          "unique": true
-        },
-        {
-          "strategy": "test_id",
-          "value": "input-owner-name",
-          "unique": true
+          "strategy": "attribute",
+          "value": "input[type='text']"
         }
       ],
       "attempts": [
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=textbox|name=e.g. Sarah Mitchell"
+          },
+          "verified": false,
+          "count": 0
+        },
         {
           "locator": {
             "strategy": "placeholder",
             "value": "e.g. Sarah Mitchell",
             "unique": true
           },
-          "score": 140.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "ownerName",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#ownerName",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "input-owner-name",
-            "unique": true
-          },
-          "score": 113.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "role",
-            "value": "role=textbox|name=Owner / Primary Contact *",
-            "unique": true
-          },
-          "score": 112.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Owner / Primary Contact *",
-            "unique": true
-          },
-          "score": 111.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_04_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_04_fill_ok.png"
     },
     {
       "step": 5,
@@ -458,143 +199,48 @@
       "target": "email",
       "element": {
         "tag": "input",
-        "type": "input",
-        "capabilities": [
-          "fill",
-          "press",
-          "hover"
-        ],
-        "text": "owner@business.com",
+        "type": "email",
+        "text": "Email Address *",
         "label": "Email Address *"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "input-email",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "role",
+        "value": "role=textbox|name=Email Address *",
+        "unique": true
       },
-      "match_score": 380,
+      "match_score": 105,
       "value": "${APP_USERNAME}",
+      "mcp_ref": "e38",
       "locator_alternatives": [
         {
-          "strategy": "role",
-          "value": "role=textbox|name=Email Address *",
-          "unique": true
-        },
-        {
           "strategy": "label",
-          "value": "Email Address *",
-          "unique": true
+          "value": "Email Address *"
         },
         {
           "strategy": "placeholder",
-          "value": "owner@business.com",
-          "unique": true
+          "value": "Email Address *"
+        },
+        {
+          "strategy": "text",
+          "value": "Email Address *"
         }
       ],
       "attempts": [
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "input-email",
-            "unique": true
-          },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
         {
           "locator": {
             "strategy": "role",
             "value": "role=textbox|name=Email Address *",
             "unique": true
           },
-          "score": 142.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Email Address *",
-            "unique": true
-          },
-          "score": 141.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "placeholder",
-            "value": "owner@business.com",
-            "unique": true
-          },
-          "score": 140.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "email",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "attribute",
-            "value": "input[type='email']",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_05_fill_ok.png",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_05_fill_ok.png",
       "value_redacted": true
     },
     {
@@ -603,143 +249,48 @@
       "target": "phone",
       "element": {
         "tag": "input",
-        "type": "input",
-        "capabilities": [
-          "fill",
-          "press",
-          "hover"
-        ],
-        "text": "(614) 555-0100",
-        "label": "Phone Number"
+        "type": "email",
+        "text": "Email Address *",
+        "label": "Email Address *"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "input-phone",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "role",
+        "value": "role=textbox|name=Email Address *",
+        "unique": true
       },
-      "match_score": 360,
+      "match_score": 90,
       "value": "(614) 555-0110",
+      "mcp_ref": "e38",
       "locator_alternatives": [
         {
-          "strategy": "role",
-          "value": "role=textbox|name=Phone Number",
-          "unique": true
-        },
-        {
           "strategy": "label",
-          "value": "Phone Number",
-          "unique": true
+          "value": "Email Address *"
         },
         {
           "strategy": "placeholder",
-          "value": "(614) 555-0100",
-          "unique": true
+          "value": "Email Address *"
+        },
+        {
+          "strategy": "text",
+          "value": "Email Address *"
         }
       ],
       "attempts": [
         {
           "locator": {
-            "strategy": "test_id",
-            "value": "input-phone",
-            "unique": true
-          },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
             "strategy": "role",
-            "value": "role=textbox|name=Phone Number",
+            "value": "role=textbox|name=Email Address *",
             "unique": true
           },
-          "score": 142.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Phone Number",
-            "unique": true
-          },
-          "score": 141.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "placeholder",
-            "value": "(614) 555-0100",
-            "unique": true
-          },
-          "score": 140.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "phone",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "attribute",
-            "value": "input[type='tel']",
-            "unique": true
-          },
-          "score": 107.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_06_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_06_fill_ok.png"
     },
     {
       "step": 7,
@@ -747,56 +298,44 @@
       "target": "address",
       "element": {
         "tag": "input",
-        "type": "input",
+        "type": "text",
         "capabilities": [
           "fill",
           "press",
           "hover"
         ],
-        "text": "123 Main St, Columbus, OH 43215",
-        "label": "Business Address"
+        "text": "123 Main St, Columbus, OH 43215"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "input-address",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "placeholder",
+        "value": "123 Main St, Columbus, OH 43215",
+        "unique": true
       },
       "match_score": 290,
+      "match_source": "dom_fallback",
       "value": "42 Baker Street, Columbus, OH 43215",
       "locator_alternatives": [
         {
-          "strategy": "placeholder",
-          "value": "123 Main St, Columbus, OH 43215",
-          "unique": true
+          "strategy": "text",
+          "value": "123 Main St, Columbus, OH 43215"
         },
         {
-          "strategy": "role",
-          "value": "role=textbox|name=Business Address",
-          "unique": true
+          "strategy": "name",
+          "value": "address"
         },
         {
-          "strategy": "label",
-          "value": "Business Address",
-          "unique": true
+          "strategy": "attribute",
+          "value": "input[type='text']"
         }
       ],
       "attempts": [
         {
           "locator": {
-            "strategy": "test_id",
-            "value": "input-address",
-            "unique": true
+            "strategy": "role",
+            "value": "role=textbox|name=123 Main St, Columbus, OH 43215"
           },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
+          "verified": false,
+          "count": 0
         },
         {
           "locator": {
@@ -804,86 +343,15 @@
             "value": "123 Main St, Columbus, OH 43215",
             "unique": true
           },
-          "score": 140.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "role",
-            "value": "role=textbox|name=Business Address",
-            "unique": true
-          },
-          "score": 112.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Business Address",
-            "unique": true
-          },
-          "score": 111.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "address",
-            "unique": true
-          },
-          "score": 109.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#address",
-            "unique": true
-          },
-          "score": 107.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_07_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_07_fill_ok.png"
     },
     {
       "step": 8,
@@ -891,142 +359,49 @@
       "target": "policyType",
       "element": {
         "tag": "select",
-        "type": "select",
-        "capabilities": [
-          "click",
-          "select",
-          "press",
-          "hover"
-        ],
-        "text": "— Select policy type — General Liability Workers' Compensation Commercial Property Business Owners Policy Professional L",
-        "label": "Policy Type *"
+        "type": "select-one",
+        "text": "Business Type *",
+        "label": "Business Type *"
       },
       "locator": {
-        "strategy": "name",
-        "value": "policyType",
-        "unique": true,
-        "validation_score": 139.0
+        "strategy": "role",
+        "value": "role=combobox|name=Business Type *",
+        "unique": true
       },
-      "match_score": 260,
+      "match_score": 40,
       "value": "General Liability",
       "option": "General Liability",
+      "mcp_ref": "e32",
       "locator_alternatives": [
         {
+          "strategy": "label",
+          "value": "Business Type *"
+        },
+        {
+          "strategy": "text",
+          "value": "Business Type *"
+        },
+        {
           "strategy": "css",
-          "value": "#policyType",
-          "unique": true
-        },
-        {
-          "strategy": "xpath_relative",
-          "value": ".//select[@id='policyType']",
-          "unique": true
-        },
-        {
-          "strategy": "test_id",
-          "value": "select-policy-type",
-          "unique": true
+          "value": "select"
         }
       ],
       "attempts": [
         {
           "locator": {
-            "strategy": "name",
-            "value": "policyType",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#policyType",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//select[@id='policyType']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "select-policy-type",
-            "unique": true
-          },
-          "score": 128.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected"
-          ]
-        },
-        {
-          "locator": {
             "strategy": "role",
-            "value": "role=combobox|name=Policy Type *",
+            "value": "role=combobox|name=Business Type *",
             "unique": true
           },
-          "score": 127.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Policy Type *",
-            "unique": true
-          },
-          "score": 126.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_08_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_08_select_ok.png"
     },
     {
       "step": 9,
@@ -1034,144 +409,49 @@
       "target": "status",
       "element": {
         "tag": "select",
-        "type": "select",
-        "capabilities": [
-          "click",
-          "select",
-          "press",
-          "hover"
-        ],
-        "text": "Pending Active Expired Cancelled",
+        "type": "select-one",
+        "text": "Status *",
         "label": "Status *"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "select-status",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "role",
+        "value": "role=combobox|name=Status *",
+        "unique": true
       },
-      "match_score": 260,
+      "match_score": 55,
       "value": "Active",
       "option": "Active",
+      "mcp_ref": "e53",
       "locator_alternatives": [
         {
-          "strategy": "role",
-          "value": "role=combobox|name=Status *",
-          "unique": true
-        },
-        {
           "strategy": "label",
-          "value": "Status *",
-          "unique": true
+          "value": "Status *"
         },
         {
-          "strategy": "name",
-          "value": "status",
-          "unique": true
+          "strategy": "text",
+          "value": "Status *"
+        },
+        {
+          "strategy": "css",
+          "value": "select"
         }
       ],
       "attempts": [
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "select-status",
-            "unique": true
-          },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
         {
           "locator": {
             "strategy": "role",
             "value": "role=combobox|name=Status *",
             "unique": true
           },
-          "score": 142.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Status *",
-            "unique": true
-          },
-          "score": 141.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "status",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#status",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "text",
-            "value": "Pending Active Expired Cancelled",
-            "unique": true
-          },
-          "score": 123.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_09_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_09_select_ok.png"
     },
     {
       "step": 10,
@@ -1179,120 +459,44 @@
       "target": "coverageAmount",
       "element": {
         "tag": "input",
-        "type": "input",
+        "type": "number",
         "capabilities": [
           "fill",
           "press",
           "hover"
         ],
-        "text": "1000000",
-        "label": "Coverage Limit ($) *"
+        "text": "1000000"
       },
       "locator": {
-        "strategy": "name",
-        "value": "coverageAmount",
-        "unique": true,
-        "validation_score": 139.0
+        "strategy": "placeholder",
+        "value": "1000000",
+        "unique": true
       },
       "match_score": 220,
+      "match_source": "dom_fallback",
       "value": "1000000",
       "locator_alternatives": [
         {
-          "strategy": "css",
-          "value": "#coverageAmount",
-          "unique": true
+          "strategy": "text",
+          "value": "1000000"
         },
         {
-          "strategy": "xpath_relative",
-          "value": ".//input[@id='coverageAmount']",
-          "unique": true
+          "strategy": "name",
+          "value": "coverageAmount"
         },
         {
-          "strategy": "test_id",
-          "value": "input-coverage-amount",
-          "unique": true
+          "strategy": "attribute",
+          "value": "input[type='number']"
         }
       ],
       "attempts": [
         {
           "locator": {
-            "strategy": "name",
-            "value": "coverageAmount",
-            "unique": true
+            "strategy": "role",
+            "value": "role=textbox|name=1000000"
           },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#coverageAmount",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//input[@id='coverageAmount']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "input-coverage-amount",
-            "unique": true
-          },
-          "score": 113.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Coverage Limit ($) *",
-            "unique": true
-          },
-          "score": 111.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "verified": false,
+          "count": 0
         },
         {
           "locator": {
@@ -1300,22 +504,15 @@
             "value": "1000000",
             "unique": true
           },
-          "score": 110.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_10_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_10_fill_ok.png"
     },
     {
       "step": 11,
@@ -1323,120 +520,44 @@
       "target": "premium",
       "element": {
         "tag": "input",
-        "type": "input",
+        "type": "number",
         "capabilities": [
           "fill",
           "press",
           "hover"
         ],
-        "text": "2500.00",
-        "label": "Annual Premium ($) *"
+        "text": "2500.00"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "input-premium",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "placeholder",
+        "value": "2500.00",
+        "unique": true
       },
       "match_score": 220,
+      "match_source": "dom_fallback",
       "value": "2750",
       "locator_alternatives": [
         {
-          "strategy": "label",
-          "value": "Annual Premium ($) *",
-          "unique": true
+          "strategy": "text",
+          "value": "2500.00"
         },
         {
           "strategy": "name",
-          "value": "premium",
-          "unique": true
+          "value": "premium"
         },
         {
-          "strategy": "css",
-          "value": "#premium",
-          "unique": true
+          "strategy": "attribute",
+          "value": "input[type='number']"
         }
       ],
       "attempts": [
         {
           "locator": {
-            "strategy": "test_id",
-            "value": "input-premium",
-            "unique": true
+            "strategy": "role",
+            "value": "role=textbox|name=2500.00"
           },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Annual Premium ($) *",
-            "unique": true
-          },
-          "score": 141.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "premium",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#premium",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//input[@id='premium']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
+          "verified": false,
+          "count": 0
         },
         {
           "locator": {
@@ -1444,22 +565,15 @@
             "value": "2500.00",
             "unique": true
           },
-          "score": 110.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_11_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_11_fill_ok.png"
     },
     {
       "step": 12,
@@ -1467,143 +581,60 @@
       "target": "deductible",
       "element": {
         "tag": "input",
-        "type": "input",
+        "type": "number",
         "capabilities": [
           "fill",
           "press",
           "hover"
         ],
-        "text": "500",
-        "label": "Deductible ($)"
+        "text": "500"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "input-deductible",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "placeholder",
+        "value": "500",
+        "unique": false
       },
       "match_score": 220,
+      "match_source": "dom_fallback",
       "value": "500",
       "locator_alternatives": [
         {
-          "strategy": "label",
-          "value": "Deductible ($)",
-          "unique": true
+          "strategy": "text",
+          "value": "500"
         },
         {
           "strategy": "name",
-          "value": "deductible",
-          "unique": true
+          "value": "deductible"
         },
         {
-          "strategy": "css",
-          "value": "#deductible",
-          "unique": true
+          "strategy": "attribute",
+          "value": "input[type='number']"
         }
       ],
       "attempts": [
         {
           "locator": {
-            "strategy": "test_id",
-            "value": "input-deductible",
-            "unique": true
+            "strategy": "role",
+            "value": "role=textbox|name=500"
           },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
+          "verified": false,
+          "count": 0
         },
         {
           "locator": {
-            "strategy": "label",
-            "value": "Deductible ($)",
-            "unique": true
+            "strategy": "placeholder",
+            "value": "500",
+            "unique": false
           },
-          "score": 141.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "deductible",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#deductible",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//input[@id='deductible']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_absolute",
-            "value": "//input[@id='deductible']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
+          "count": 2
         }
       ],
       "verified": true,
-      "locator_unique": true,
-      "locator_count": 1,
+      "locator_unique": false,
+      "locator_count": 2,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_12_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_12_fill_ok.png"
     },
     {
       "step": 13,
@@ -1611,145 +642,49 @@
       "target": "agent",
       "element": {
         "tag": "select",
-        "type": "select",
-        "capabilities": [
-          "click",
-          "select",
-          "press",
-          "hover"
-        ],
-        "text": "— Unassigned — James Kowalski Linda Torres Anna Schwartz Michael Reed",
+        "type": "select-one",
+        "text": "Assigned Agent",
         "label": "Assigned Agent"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "select-agent",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "role",
+        "value": "role=combobox|name=Assigned Agent",
+        "unique": true
       },
-      "match_score": 260,
+      "match_score": 55,
       "value": "James Kowalski",
       "option": "James Kowalski",
+      "mcp_ref": "e65",
       "locator_alternatives": [
         {
-          "strategy": "role",
-          "value": "role=combobox|name=Assigned Agent",
-          "unique": true
-        },
-        {
           "strategy": "label",
-          "value": "Assigned Agent",
-          "unique": true
+          "value": "Assigned Agent"
         },
         {
-          "strategy": "name",
-          "value": "agent",
-          "unique": true
+          "strategy": "text",
+          "value": "Assigned Agent"
+        },
+        {
+          "strategy": "css",
+          "value": "select"
         }
       ],
       "attempts": [
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "select-agent",
-            "unique": true
-          },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
         {
           "locator": {
             "strategy": "role",
             "value": "role=combobox|name=Assigned Agent",
             "unique": true
           },
-          "score": 142.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Assigned Agent",
-            "unique": true
-          },
-          "score": 141.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "agent",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#agent",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//select[@id='agent']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Selectable control detected",
-            "Semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_13_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_13_select_ok.png"
     },
     {
       "step": 14,
@@ -1757,286 +692,108 @@
       "target": "effectiveDate",
       "element": {
         "tag": "input",
-        "type": "input",
+        "type": "date",
         "capabilities": [
           "fill",
           "press",
           "hover"
-        ],
-        "label": "Effective Date *"
+        ]
       },
       "locator": {
         "strategy": "name",
         "value": "effectiveDate",
-        "unique": true,
-        "validation_score": 139.0
+        "unique": true
       },
       "match_score": 220,
+      "match_source": "dom_fallback",
       "value": "2026-08-06",
       "locator_alternatives": [
         {
+          "strategy": "attribute",
+          "value": "input[type='date']"
+        },
+        {
           "strategy": "css",
-          "value": "#effectiveDate",
-          "unique": true
+          "value": "#effectiveDate"
         },
         {
           "strategy": "xpath_relative",
-          "value": ".//input[@id='effectiveDate']",
-          "unique": true
-        },
-        {
-          "strategy": "test_id",
-          "value": "input-effective-date",
-          "unique": true
+          "value": ".//input[@id='effectiveDate']"
         }
       ],
       "attempts": [
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=textbox|name=effectiveDate"
+          },
+          "verified": false,
+          "count": 0
+        },
         {
           "locator": {
             "strategy": "name",
             "value": "effectiveDate",
             "unique": true
           },
-          "score": 139.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#effectiveDate",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//input[@id='effectiveDate']",
-            "unique": true
-          },
-          "score": 136.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "input-effective-date",
-            "unique": true
-          },
-          "score": 113.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "role",
-            "value": "role=textbox|name=Effective Date *",
-            "unique": true
-          },
-          "score": 112.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Effective Date *",
-            "unique": true
-          },
-          "score": 111.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_14_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_14_fill_ok.png"
     },
     {
       "step": 15,
       "action": "fill",
       "target": "notes",
       "element": {
-        "tag": "textarea",
-        "type": "textarea",
-        "capabilities": [
-          "fill",
-          "press",
-          "hover"
-        ],
-        "text": "Any additional information about this policy…",
+        "tag": "input",
+        "type": "text",
+        "text": "Notes",
         "label": "Notes"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "input-notes",
-        "unique": true,
-        "validation_score": 143.0
+        "strategy": "role",
+        "value": "role=textbox|name=Notes",
+        "unique": true
       },
-      "match_score": 220,
+      "match_score": 40,
       "value": "Created by UI Explorer TC005",
+      "mcp_ref": "e74",
       "locator_alternatives": [
         {
-          "strategy": "role",
-          "value": "role=textbox|name=Notes",
-          "unique": true
-        },
-        {
           "strategy": "label",
-          "value": "Notes",
-          "unique": true
+          "value": "Notes"
         },
         {
-          "strategy": "name",
-          "value": "notes",
-          "unique": true
+          "strategy": "placeholder",
+          "value": "Notes"
+        },
+        {
+          "strategy": "text",
+          "value": "Notes"
         }
       ],
       "attempts": [
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "input-notes",
-            "unique": true
-          },
-          "score": 143.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
         {
           "locator": {
             "strategy": "role",
             "value": "role=textbox|name=Notes",
             "unique": true
           },
-          "score": 142.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "label",
-            "value": "Notes",
-            "unique": true
-          },
-          "score": 141.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "name",
-            "value": "notes",
-            "unique": true
-          },
-          "score": 139.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#notes",
-            "unique": true
-          },
-          "score": 137.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "placeholder",
-            "value": "Any additional information about this policy…",
-            "unique": true
-          },
-          "score": 110.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Fill requires editable field",
-            "Weak semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_15_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_15_fill_ok.png"
     },
     {
       "step": 16,
@@ -2044,141 +801,47 @@
       "target": "submit",
       "element": {
         "tag": "button",
-        "type": "button",
-        "capabilities": [
-          "click",
-          "press",
-          "hover"
-        ],
-        "text": "Save Policy"
+        "type": "submit",
+        "text": "Save Policy",
+        "label": "Save Policy"
       },
       "locator": {
-        "strategy": "test_id",
-        "value": "btn-submit",
-        "unique": true,
-        "validation_score": 118.0
+        "strategy": "role",
+        "value": "role=button|name=Save Policy",
+        "unique": true
       },
-      "match_score": 335,
+      "match_score": 145,
+      "mcp_ref": "e78",
       "locator_alternatives": [
         {
-          "strategy": "role",
-          "value": "role=button|name=Save Policy",
-          "unique": true
+          "strategy": "label",
+          "value": "Save Policy"
         },
         {
           "strategy": "text",
-          "value": "Save Policy",
-          "unique": true
+          "value": "Save Policy"
         },
         {
-          "strategy": "attribute",
-          "value": "button[type='submit']",
-          "unique": true
+          "strategy": "css",
+          "value": "button"
         }
       ],
       "attempts": [
-        {
-          "locator": {
-            "strategy": "test_id",
-            "value": "btn-submit",
-            "unique": true
-          },
-          "score": 118.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Click/hover needs visible target",
-            "Semantic match with step target"
-          ]
-        },
         {
           "locator": {
             "strategy": "role",
             "value": "role=button|name=Save Policy",
             "unique": true
           },
-          "score": 117.0,
           "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Click/hover needs visible target",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "text",
-            "value": "Save Policy",
-            "unique": true
-          },
-          "score": 113.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Click/hover needs visible target",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "attribute",
-            "value": "button[type='submit']",
-            "unique": true
-          },
-          "score": 112.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Click/hover needs visible target",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "css",
-            "value": "#btn-submit",
-            "unique": true
-          },
-          "score": 112.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Click/hover needs visible target",
-            "Semantic match with step target"
-          ]
-        },
-        {
-          "locator": {
-            "strategy": "xpath_relative",
-            "value": ".//button[@id='btn-submit']",
-            "unique": true
-          },
-          "score": 111.0,
-          "verified": true,
-          "reasons": [
-            "Unique match",
-            "Visible",
-            "Enabled",
-            "Click/hover needs visible target",
-            "Semantic match with step target"
-          ]
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_16_click_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_16_click_ok.png"
     },
     {
       "step": 17,
@@ -2191,7 +854,7 @@
       "url_matched": true,
       "status": "deferred",
       "reason": "expected after executed actions; discover does not execute",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_17_assert_fail.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_17_assert_fail.png"
     },
     {
       "step": 18,
@@ -2204,14 +867,14 @@
       "url_matched": true,
       "status": "deferred",
       "reason": "expected after executed actions; discover does not execute",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_18_assert_fail.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_18_assert_fail.png"
     },
     {
       "step": 19,
       "action": "navigate",
       "url": "http://localhost:3000/policies",
       "status": "ok",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_19_navigate_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_19_navigate_ok.png"
     },
     {
       "step": 20,
@@ -2223,7 +886,7 @@
       "verified": true,
       "url_matched": true,
       "status": "passed",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_20_assert_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165923\\step_20_assert_ok.png"
     }
   ],
   "llm_recovery_used": false
