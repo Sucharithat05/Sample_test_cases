@@ -17,7 +17,8 @@ if (fs.existsSync(envPath)) {
 const baseURL =
   process.env.BASE_URL ||
   process.env.PLAYWRIGHT_BASE_URL ||
-  'https://opencart.abstracta.us/';
+  process.env.APP_BASE_URL ||
+  'http://localhost:3000';
 
 /**
  * Phase 2 batch runner — frozen locators from ui-explorer-agent codegen.
@@ -32,6 +33,7 @@ export default defineConfig({
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
     baseURL,
+    ignoreHTTPSErrors: true,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     locale: 'en-IN',

@@ -3,19 +3,23 @@ import fs from 'fs';
 import path from 'path';
 
 /**
- * Refreshes .auth/<site>.json before the batch runs.
- *
- * OpenCart sessions expire quickly, so a storageState captured during Phase 1
- * exploration is usually dead by the time Phase 2 runs. Auth-gated specs
- * consume the file this writes.
+ * Refreshes .auth/<site>.json before the batch runs (OpenCart / SauceDemo).
+ * Westfield policy-app has no login — this setup is a no-op for that site.
  */
-const site = process.env.AUTH_SITE || 'opencart';
+const site = (process.env.AUTH_SITE || process.env.APP_SITE || 'opencart').toLowerCase();
 const authFile = process.env.STORAGE_STATE || path.join('.auth', `${site}.json`);
 const loginUrl =
   process.env.LOGIN_URL ||
   'https://opencart.abstracta.us/index.php?route=account/login';
 
+const NO_LOGIN_SITES = new Set(['westfield', 'west', 'insurance', 'policy', 'policyapp']);
+
 setup('authenticate', async ({ page }) => {
+  if (NO_LOGIN_SITES.has(site)) {
+    setup.skip(true, `Site ${site} has no login — skipping auth setup`);
+    return;
+  }
+
   const username = process.env.APP_USERNAME || '';
   const password = process.env.APP_PASSWORD || '';
 

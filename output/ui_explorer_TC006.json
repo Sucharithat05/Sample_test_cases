@@ -1,0 +1,1372 @@
+{
+  "agent": "ui_explorer",
+  "phase": "explore",
+  "mode": "discover",
+  "test_case_id": "TC006",
+  "goal": "Edit Policy POL-001 and Restore for Isolation",
+  "base_url": "http://localhost:3000/policy/new",
+  "site": "westfield",
+  "generated_at": "2026-08-06T11:20:53.018224",
+  "browser_backend": "playwright",
+  "status": "completed",
+  "locators_found": 9,
+  "locators_verified": 9,
+  "steps_executed": 0,
+  "steps_unmatched": 0,
+  "steps": [
+    {
+      "step": 1,
+      "action": "navigate",
+      "url": "http://localhost:3000/policy/POL-001/edit",
+      "status": "ok",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_01_navigate_ok.png"
+    },
+    {
+      "step": 2,
+      "action": "assert",
+      "target": "businessName",
+      "expected_text": "Green Valley Bakery LLC",
+      "page_url": "http://localhost:3000/policy/POL-001/edit",
+      "executed": false,
+      "locator": {
+        "strategy": "placeholder",
+        "value": "e.g. Green Valley Bakery LLC",
+        "unique": true,
+        "validation_score": 115.0
+      },
+      "locator_alternatives": [
+        {
+          "strategy": "name",
+          "value": "businessName",
+          "unique": true
+        },
+        {
+          "strategy": "css",
+          "value": "#businessName",
+          "unique": true
+        },
+        {
+          "strategy": "test_id",
+          "value": "input-business-name",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "placeholder",
+            "value": "e.g. Green Valley Bakery LLC",
+            "unique": true
+          },
+          "score": 115.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Assert needs matchable target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "name",
+            "value": "businessName",
+            "unique": true
+          },
+          "score": 114.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Assert needs matchable target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#businessName",
+            "unique": true
+          },
+          "score": 112.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Assert needs matchable target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "input-business-name",
+            "unique": true
+          },
+          "score": 103.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Assert needs matchable target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=textbox|name=Business Name *",
+            "unique": true
+          },
+          "score": 102.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Assert needs matchable target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "label",
+            "value": "Business Name *",
+            "unique": true
+          },
+          "score": 101.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Assert needs matchable target"
+          ]
+        }
+      ],
+      "verified": true,
+      "url_matched": true,
+      "status": "passed",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_02_assert_ok.png"
+    },
+    {
+      "step": 3,
+      "action": "fill",
+      "target": "businessName",
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "capabilities": [
+          "fill",
+          "press",
+          "hover"
+        ],
+        "text": "e.g. Green Valley Bakery LLC",
+        "label": "Business Name *"
+      },
+      "locator": {
+        "strategy": "name",
+        "value": "businessName",
+        "unique": true,
+        "validation_score": 139.0
+      },
+      "match_score": 220,
+      "value": "Maple Street Café Updated",
+      "locator_alternatives": [
+        {
+          "strategy": "css",
+          "value": "#businessName",
+          "unique": true
+        },
+        {
+          "strategy": "test_id",
+          "value": "input-business-name",
+          "unique": true
+        },
+        {
+          "strategy": "role",
+          "value": "role=textbox|name=Business Name *",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "name",
+            "value": "businessName",
+            "unique": true
+          },
+          "score": 139.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#businessName",
+            "unique": true
+          },
+          "score": 137.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "input-business-name",
+            "unique": true
+          },
+          "score": 113.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=textbox|name=Business Name *",
+            "unique": true
+          },
+          "score": 112.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "label",
+            "value": "Business Name *",
+            "unique": true
+          },
+          "score": 111.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "placeholder",
+            "value": "e.g. Green Valley Bakery LLC",
+            "unique": true
+          },
+          "score": 110.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_03_fill_ok.png"
+    },
+    {
+      "step": 4,
+      "action": "fill",
+      "target": "premium",
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "capabilities": [
+          "fill",
+          "press",
+          "hover"
+        ],
+        "text": "2500.00",
+        "label": "Annual Premium ($) *"
+      },
+      "locator": {
+        "strategy": "test_id",
+        "value": "input-premium",
+        "unique": true,
+        "validation_score": 143.0
+      },
+      "match_score": 220,
+      "value": "3200",
+      "locator_alternatives": [
+        {
+          "strategy": "label",
+          "value": "Annual Premium ($) *",
+          "unique": true
+        },
+        {
+          "strategy": "name",
+          "value": "premium",
+          "unique": true
+        },
+        {
+          "strategy": "css",
+          "value": "#premium",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "input-premium",
+            "unique": true
+          },
+          "score": 143.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "label",
+            "value": "Annual Premium ($) *",
+            "unique": true
+          },
+          "score": 141.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "name",
+            "value": "premium",
+            "unique": true
+          },
+          "score": 139.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#premium",
+            "unique": true
+          },
+          "score": 137.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "xpath_relative",
+            "value": ".//input[@id='premium']",
+            "unique": true
+          },
+          "score": 136.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "placeholder",
+            "value": "2500.00",
+            "unique": true
+          },
+          "score": 110.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_04_fill_ok.png"
+    },
+    {
+      "step": 5,
+      "action": "select",
+      "target": "status",
+      "element": {
+        "tag": "select",
+        "type": "select",
+        "capabilities": [
+          "click",
+          "select",
+          "press",
+          "hover"
+        ],
+        "text": "Pending Active Expired Cancelled",
+        "label": "Status *"
+      },
+      "locator": {
+        "strategy": "test_id",
+        "value": "select-status",
+        "unique": true,
+        "validation_score": 143.0
+      },
+      "match_score": 260,
+      "value": "Active",
+      "option": "Active",
+      "locator_alternatives": [
+        {
+          "strategy": "role",
+          "value": "role=combobox|name=Status *",
+          "unique": true
+        },
+        {
+          "strategy": "label",
+          "value": "Status *",
+          "unique": true
+        },
+        {
+          "strategy": "name",
+          "value": "status",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "select-status",
+            "unique": true
+          },
+          "score": 143.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=combobox|name=Status *",
+            "unique": true
+          },
+          "score": 142.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "label",
+            "value": "Status *",
+            "unique": true
+          },
+          "score": 141.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "name",
+            "value": "status",
+            "unique": true
+          },
+          "score": 139.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#status",
+            "unique": true
+          },
+          "score": 137.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "text",
+            "value": "Pending Active Expired Cancelled",
+            "unique": true
+          },
+          "score": 123.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_05_select_ok.png"
+    },
+    {
+      "step": 6,
+      "action": "click",
+      "target": "submit",
+      "element": {
+        "tag": "button",
+        "type": "button",
+        "capabilities": [
+          "click",
+          "press",
+          "hover"
+        ],
+        "text": "Save Changes"
+      },
+      "locator": {
+        "strategy": "test_id",
+        "value": "btn-submit",
+        "unique": true,
+        "validation_score": 118.0
+      },
+      "match_score": 275,
+      "locator_alternatives": [
+        {
+          "strategy": "attribute",
+          "value": "button[type='submit']",
+          "unique": true
+        },
+        {
+          "strategy": "css",
+          "value": "#btn-submit",
+          "unique": true
+        },
+        {
+          "strategy": "xpath_relative",
+          "value": ".//button[@id='btn-submit']",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "btn-submit",
+            "unique": true
+          },
+          "score": 118.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "attribute",
+            "value": "button[type='submit']",
+            "unique": true
+          },
+          "score": 112.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#btn-submit",
+            "unique": true
+          },
+          "score": 112.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "xpath_relative",
+            "value": ".//button[@id='btn-submit']",
+            "unique": true
+          },
+          "score": 111.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=button|name=Save Changes",
+            "unique": true
+          },
+          "score": 87.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "text",
+            "value": "Save Changes",
+            "unique": true
+          },
+          "score": 83.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Weak semantic match with step target"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_06_click_ok.png"
+    },
+    {
+      "step": 7,
+      "action": "assert",
+      "target": "policy_detail",
+      "expected_text": "Maple Street Café Updated",
+      "page_url": "http://localhost:3000/policy/POL-001/edit",
+      "executed": false,
+      "verified": false,
+      "url_matched": true,
+      "status": "deferred",
+      "reason": "expected after executed actions; discover does not execute",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_07_assert_fail.png"
+    },
+    {
+      "step": 8,
+      "action": "assert",
+      "target": "premium_formatted",
+      "expected_text": "$3,200.00",
+      "page_url": "http://localhost:3000/policy/POL-001/edit",
+      "executed": false,
+      "verified": false,
+      "url_matched": true,
+      "status": "deferred",
+      "reason": "expected after executed actions; discover does not execute",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_08_assert_fail.png"
+    },
+    {
+      "step": 9,
+      "action": "navigate",
+      "url": "http://localhost:3000/policies",
+      "status": "ok",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_09_navigate_ok.png"
+    },
+    {
+      "step": 10,
+      "action": "assert",
+      "target": "policy_list_row",
+      "expected_text": "Maple Street Café Updated",
+      "page_url": "http://localhost:3000/policies",
+      "executed": false,
+      "verified": false,
+      "url_matched": true,
+      "status": "deferred",
+      "reason": "expected after executed actions; discover does not execute",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_10_assert_fail.png"
+    },
+    {
+      "step": 11,
+      "action": "navigate",
+      "url": "http://localhost:3000/policy/POL-001/edit",
+      "status": "ok",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_11_navigate_ok.png"
+    },
+    {
+      "step": 12,
+      "action": "fill",
+      "target": "businessName",
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "capabilities": [
+          "fill",
+          "press",
+          "hover"
+        ],
+        "text": "e.g. Green Valley Bakery LLC",
+        "label": "Business Name *"
+      },
+      "locator": {
+        "strategy": "name",
+        "value": "businessName",
+        "unique": true,
+        "validation_score": 139.0
+      },
+      "match_score": 220,
+      "value": "Green Valley Bakery LLC",
+      "locator_alternatives": [
+        {
+          "strategy": "css",
+          "value": "#businessName",
+          "unique": true
+        },
+        {
+          "strategy": "test_id",
+          "value": "input-business-name",
+          "unique": true
+        },
+        {
+          "strategy": "role",
+          "value": "role=textbox|name=Business Name *",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "name",
+            "value": "businessName",
+            "unique": true
+          },
+          "score": 139.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#businessName",
+            "unique": true
+          },
+          "score": 137.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "input-business-name",
+            "unique": true
+          },
+          "score": 113.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=textbox|name=Business Name *",
+            "unique": true
+          },
+          "score": 112.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "label",
+            "value": "Business Name *",
+            "unique": true
+          },
+          "score": 111.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "placeholder",
+            "value": "e.g. Green Valley Bakery LLC",
+            "unique": true
+          },
+          "score": 110.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_12_fill_ok.png"
+    },
+    {
+      "step": 13,
+      "action": "fill",
+      "target": "premium",
+      "element": {
+        "tag": "input",
+        "type": "input",
+        "capabilities": [
+          "fill",
+          "press",
+          "hover"
+        ],
+        "text": "2500.00",
+        "label": "Annual Premium ($) *"
+      },
+      "locator": {
+        "strategy": "test_id",
+        "value": "input-premium",
+        "unique": true,
+        "validation_score": 143.0
+      },
+      "match_score": 220,
+      "value": "1850",
+      "locator_alternatives": [
+        {
+          "strategy": "label",
+          "value": "Annual Premium ($) *",
+          "unique": true
+        },
+        {
+          "strategy": "name",
+          "value": "premium",
+          "unique": true
+        },
+        {
+          "strategy": "css",
+          "value": "#premium",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "input-premium",
+            "unique": true
+          },
+          "score": 143.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "label",
+            "value": "Annual Premium ($) *",
+            "unique": true
+          },
+          "score": 141.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "name",
+            "value": "premium",
+            "unique": true
+          },
+          "score": 139.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#premium",
+            "unique": true
+          },
+          "score": 137.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "xpath_relative",
+            "value": ".//input[@id='premium']",
+            "unique": true
+          },
+          "score": 136.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "placeholder",
+            "value": "2500.00",
+            "unique": true
+          },
+          "score": 110.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Fill requires editable field",
+            "Weak semantic match with step target"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_13_fill_ok.png"
+    },
+    {
+      "step": 14,
+      "action": "select",
+      "target": "status",
+      "element": {
+        "tag": "select",
+        "type": "select",
+        "capabilities": [
+          "click",
+          "select",
+          "press",
+          "hover"
+        ],
+        "text": "Pending Active Expired Cancelled",
+        "label": "Status *"
+      },
+      "locator": {
+        "strategy": "test_id",
+        "value": "select-status",
+        "unique": true,
+        "validation_score": 143.0
+      },
+      "match_score": 260,
+      "value": "Active",
+      "option": "Active",
+      "locator_alternatives": [
+        {
+          "strategy": "role",
+          "value": "role=combobox|name=Status *",
+          "unique": true
+        },
+        {
+          "strategy": "label",
+          "value": "Status *",
+          "unique": true
+        },
+        {
+          "strategy": "name",
+          "value": "status",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "select-status",
+            "unique": true
+          },
+          "score": 143.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=combobox|name=Status *",
+            "unique": true
+          },
+          "score": 142.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "label",
+            "value": "Status *",
+            "unique": true
+          },
+          "score": 141.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "name",
+            "value": "status",
+            "unique": true
+          },
+          "score": 139.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#status",
+            "unique": true
+          },
+          "score": 137.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "text",
+            "value": "Pending Active Expired Cancelled",
+            "unique": true
+          },
+          "score": 123.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Selectable control detected"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_14_select_ok.png"
+    },
+    {
+      "step": 15,
+      "action": "click",
+      "target": "submit",
+      "element": {
+        "tag": "button",
+        "type": "button",
+        "capabilities": [
+          "click",
+          "press",
+          "hover"
+        ],
+        "text": "Save Changes"
+      },
+      "locator": {
+        "strategy": "test_id",
+        "value": "btn-submit",
+        "unique": true,
+        "validation_score": 118.0
+      },
+      "match_score": 275,
+      "locator_alternatives": [
+        {
+          "strategy": "attribute",
+          "value": "button[type='submit']",
+          "unique": true
+        },
+        {
+          "strategy": "css",
+          "value": "#btn-submit",
+          "unique": true
+        },
+        {
+          "strategy": "xpath_relative",
+          "value": ".//button[@id='btn-submit']",
+          "unique": true
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "test_id",
+            "value": "btn-submit",
+            "unique": true
+          },
+          "score": 118.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "attribute",
+            "value": "button[type='submit']",
+            "unique": true
+          },
+          "score": 112.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "css",
+            "value": "#btn-submit",
+            "unique": true
+          },
+          "score": 112.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "xpath_relative",
+            "value": ".//button[@id='btn-submit']",
+            "unique": true
+          },
+          "score": 111.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=button|name=Save Changes",
+            "unique": true
+          },
+          "score": 87.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Weak semantic match with step target"
+          ]
+        },
+        {
+          "locator": {
+            "strategy": "text",
+            "value": "Save Changes",
+            "unique": true
+          },
+          "score": 83.0,
+          "verified": true,
+          "reasons": [
+            "Unique match",
+            "Visible",
+            "Enabled",
+            "Click/hover needs visible target",
+            "Weak semantic match with step target"
+          ]
+        }
+      ],
+      "verified": true,
+      "locator_unique": true,
+      "locator_count": 1,
+      "executed": false,
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_15_click_ok.png"
+    },
+    {
+      "step": 16,
+      "action": "assert",
+      "target": "policy_detail",
+      "expected_text": "Green Valley Bakery LLC",
+      "page_url": "http://localhost:3000/policy/POL-001/edit",
+      "executed": false,
+      "verified": false,
+      "url_matched": true,
+      "status": "deferred",
+      "reason": "expected after executed actions; discover does not execute",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165014\\step_16_assert_fail.png"
+    }
+  ],
+  "llm_recovery_used": false
+}
