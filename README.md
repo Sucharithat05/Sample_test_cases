@@ -82,6 +82,23 @@ not a broken file. This repo sets `.vscode/settings.json` so the editor treats `
 | TC002 | Add Product To Cart | High | [TC002](test-cases/TC002_Add_Product_To_Cart.md) |
 | TC003 | Wishlist Product | Medium | [TC003](test-cases/TC003_Wishlist_Product.md) |
 | TC004 | Search Product | Medium | [TC004](test-cases/TC004_Search_Product.md) |
+| TC005 | Create New Policy (Westfield) | High | [TC005](test-cases/TC005_Create_New_Policy.md) |
+| TC006 | Edit Policy POL-001 (Westfield) | High | [TC006](test-cases/TC006_Edit_Policy.md) |
+
+### Westfield / insurance cases
+
+Use site profile `westfield`. Put the confidential app URL only in `../ui-explorer-agent/.env`:
+
+```env
+APP_SITE=westfield
+APP_BASE_URL=https://YOUR-CONFIDENTIAL-HOST/
+```
+
+```bash
+cd ../ui-explorer-agent
+python main.py --phase explore --site westfield --test-case ..\Sample_test_cases\test-cases\TC005_Create_New_Policy.md --no-llm
+python main.py --phase explore --site westfield --test-case ..\Sample_test_cases\test-cases\TC006_Edit_Policy.md --no-llm
+```
 
 Discovered locators: [`output/`](output/). Generated specs: [`generated/`](generated/).
 
