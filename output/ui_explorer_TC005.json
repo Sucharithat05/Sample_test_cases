@@ -6,7 +6,7 @@
   "goal": "Create New Policy and Verify Detail + List",
   "base_url": "http://localhost:3000/policy/new",
   "site": "westfield",
-  "generated_at": "2026-08-06T11:19:15.693667",
+  "generated_at": "2026-08-06T11:23:18.586693",
   "browser_backend": "playwright",
   "status": "completed",
   "locators_found": 15,
@@ -19,7 +19,7 @@
       "action": "navigate",
       "url": "http://localhost:3000/policy/new",
       "status": "ok",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_01_navigate_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_01_navigate_ok.png"
     },
     {
       "step": 2,
@@ -163,7 +163,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_02_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_02_fill_ok.png"
     },
     {
       "step": 3,
@@ -306,7 +306,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_03_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_03_select_ok.png"
     },
     {
       "step": 4,
@@ -450,7 +450,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_04_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_04_fill_ok.png"
     },
     {
       "step": 5,
@@ -594,7 +594,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_05_fill_ok.png",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_05_fill_ok.png",
       "value_redacted": true
     },
     {
@@ -739,7 +739,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_06_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_06_fill_ok.png"
     },
     {
       "step": 7,
@@ -883,7 +883,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_07_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_07_fill_ok.png"
     },
     {
       "step": 8,
@@ -1026,7 +1026,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_08_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_08_select_ok.png"
     },
     {
       "step": 9,
@@ -1171,7 +1171,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_09_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_09_select_ok.png"
     },
     {
       "step": 10,
@@ -1315,7 +1315,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_10_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_10_fill_ok.png"
     },
     {
       "step": 11,
@@ -1459,7 +1459,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_11_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_11_fill_ok.png"
     },
     {
       "step": 12,
@@ -1603,7 +1603,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_12_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_12_fill_ok.png"
     },
     {
       "step": 13,
@@ -1749,7 +1749,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_13_select_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_13_select_ok.png"
     },
     {
       "step": 14,
@@ -1892,7 +1892,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_14_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_14_fill_ok.png"
     },
     {
       "step": 15,
@@ -2036,7 +2036,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_15_fill_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_15_fill_ok.png"
     },
     {
       "step": 16,
@@ -2178,7 +2178,7 @@
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_16_click_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_16_click_ok.png"
     },
     {
       "step": 17,
@@ -2191,7 +2191,7 @@
       "url_matched": true,
       "status": "deferred",
       "reason": "expected after executed actions; discover does not execute",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_17_assert_fail.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_17_assert_fail.png"
     },
     {
       "step": 18,
@@ -2204,14 +2204,14 @@
       "url_matched": true,
       "status": "deferred",
       "reason": "expected after executed actions; discover does not execute",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_18_assert_fail.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_18_assert_fail.png"
     },
     {
       "step": 19,
       "action": "navigate",
       "url": "http://localhost:3000/policies",
       "status": "ok",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_19_navigate_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_19_navigate_ok.png"
     },
     {
       "step": 20,
@@ -2223,7 +2223,7 @@
       "verified": true,
       "url_matched": true,
       "status": "passed",
-      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_164811\\step_20_assert_ok.png"
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_165224\\step_20_assert_ok.png"
     }
   ],
   "llm_recovery_used": false
