@@ -4,205 +4,92 @@
   "mode": "discover",
   "test_case_id": "TC004",
   "goal": "Search a Product",
-  "base_url": "https://opencart.abstracta.us/index.php?route=account/login",
-  "site": "opencart",
-  "generated_at": "2026-08-03T10:04:41.151492",
+  "base_url": "http://localhost:3000",
+  "site": "westfield",
+  "generated_at": "2026-08-06T07:15:31.472994",
   "browser_backend": "playwright_mcp",
   "status": "completed",
-  "locators_found": 5,
-  "locators_verified": 5,
+  "locators_found": 1,
+  "locators_verified": 1,
   "steps_executed": 0,
-  "steps_unmatched": 0,
+  "steps_unmatched": 1,
   "steps": [
     {
       "step": 1,
       "action": "navigate",
-      "url": "https://opencart.abstracta.us/index.php?route=account/login",
-      "status": "ok"
+      "url": "http://localhost:3000",
+      "status": "ok",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_124513\\step_01_navigate_ok.png"
     },
     {
       "step": 2,
       "action": "fill",
-      "target": "username",
-      "element": {
-        "tag": "input",
-        "type": "email",
-        "text": "E-Mail Address",
-        "label": "E-Mail Address"
-      },
-      "locator": {
-        "strategy": "role",
-        "value": "role=textbox|name=E-Mail Address",
-        "unique": true
-      },
-      "value": "${APP_USERNAME}",
-      "mcp_ref": "e92",
-      "locator_alternatives": [
-        {
-          "strategy": "label",
-          "value": "E-Mail Address"
-        },
-        {
-          "strategy": "placeholder",
-          "value": "E-Mail Address"
-        }
-      ],
-      "verified": true,
-      "locator_unique": true,
-      "locator_count": 1,
+      "target": "search",
+      "status": "unmatched",
       "executed": false,
-      "value_redacted": true
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_124513\\step_02_fill_fail.png"
     },
     {
       "step": 3,
-      "action": "fill",
-      "target": "password",
+      "action": "click",
+      "target": "search-button",
       "element": {
-        "tag": "input",
-        "type": "password",
-        "text": "Password",
-        "label": "Password"
+        "tag": "a",
+        "type": "link",
+        "text": "Dashboard",
+        "label": "Dashboard"
       },
       "locator": {
         "strategy": "role",
-        "value": "role=textbox|name=Password",
+        "value": "role=link|name=Dashboard",
         "unique": true
       },
-      "value": "${APP_PASSWORD}",
-      "mcp_ref": "e95",
+      "match_score": 115,
+      "mcp_ref": "e9",
       "locator_alternatives": [
         {
           "strategy": "label",
-          "value": "Password"
+          "value": "Dashboard"
         },
         {
-          "strategy": "placeholder",
-          "value": "Password"
+          "strategy": "text",
+          "value": "Dashboard"
+        },
+        {
+          "strategy": "css",
+          "value": "a"
+        }
+      ],
+      "attempts": [
+        {
+          "locator": {
+            "strategy": "role",
+            "value": "role=link|name=Dashboard",
+            "unique": true
+          },
+          "verified": true,
+          "count": 1
         }
       ],
       "verified": true,
       "locator_unique": true,
       "locator_count": 1,
       "executed": false,
-      "value_redacted": true
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_124513\\step_03_click_ok.png"
     },
     {
       "step": 4,
-      "action": "click",
-      "target": "login",
-      "element": {
-        "tag": "button",
-        "type": "submit",
-        "text": "Login",
-        "label": "Login"
-      },
-      "locator": {
-        "strategy": "role",
-        "value": "role=button|name=Login",
-        "unique": true
-      },
-      "mcp_ref": "e97",
-      "locator_alternatives": [
-        {
-          "strategy": "label",
-          "value": "Login"
-        },
-        {
-          "strategy": "text",
-          "value": "Login"
-        },
-        {
-          "strategy": "attribute",
-          "value": "button[type='submit']"
-        }
-      ],
-      "verified": true,
-      "locator_unique": true,
-      "locator_count": 1,
-      "executed": false
-    },
-    {
-      "step": 5,
-      "action": "navigate",
-      "url": "https://opencart.abstracta.us/index.php?route=product/search",
-      "status": "ok"
-    },
-    {
-      "step": 6,
-      "action": "fill",
-      "target": "search",
-      "element": {
-        "tag": "input",
-        "type": "text",
-        "text": "Search",
-        "label": "Search"
-      },
-      "locator": {
-        "strategy": "role",
-        "value": "role=textbox|name=Search",
-        "unique": true
-      },
-      "value": "iPhone",
-      "mcp_ref": "e37",
-      "locator_alternatives": [
-        {
-          "strategy": "label",
-          "value": "Search"
-        },
-        {
-          "strategy": "placeholder",
-          "value": "Search"
-        }
-      ],
-      "verified": true,
-      "locator_unique": true,
-      "locator_count": 1,
-      "executed": false
-    },
-    {
-      "step": 7,
-      "action": "click",
-      "target": "search",
-      "element": {
-        "tag": "button",
-        "type": "submit",
-        "text": "Search",
-        "label": "Search"
-      },
-      "locator": {
-        "strategy": "role",
-        "value": "role=button|name=Search",
-        "unique": true
-      },
-      "mcp_ref": "e87",
-      "locator_alternatives": [
-        {
-          "strategy": "label",
-          "value": "Search"
-        },
-        {
-          "strategy": "text",
-          "value": "Search"
-        }
-      ],
-      "verified": true,
-      "locator_unique": true,
-      "locator_count": 1,
-      "executed": false
-    },
-    {
-      "step": 8,
       "action": "assert",
       "target": "results",
-      "expected_text": "iPhone",
-      "page_url": "https://opencart.abstracta.us/index.php?route=product/search",
+      "expected_text": "Sample Wireless Headphones",
+      "page_url": "http://localhost:3000/",
       "executed": false,
       "verified": false,
       "url_matched": true,
       "status": "deferred",
-      "reason": "expected after executed actions; discover does not execute"
+      "reason": "expected after executed actions; discover does not execute",
+      "screenshot_path": "C:\\Users\\Sucharitha\\Documents\\ui-explorer-agent\\screenshots\\20260806_124513\\step_04_assert_fail.png"
     }
   ],
-  "llm_recovery_used": false,
-  "locator_policy": "exclude_id"
+  "llm_recovery_used": true
 }
